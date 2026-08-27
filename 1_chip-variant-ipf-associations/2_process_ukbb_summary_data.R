@@ -55,7 +55,7 @@ rm(ipf_data_to_join, ltl_data_to_join)
 published_coords <- strsplit(raw_published_data$ID, ":", fixed = TRUE)
 published_chromosomes <- paste("chr", sapply(published_coords,
                                              function(x) x[1]),
-                                             sep = "")
+                               sep = "")
 published_positions <-  as.integer(sapply(published_coords, function(x) x[2]))
 published_refs <- sapply(published_coords, function(x) x[3])
 published_alts <- sapply(published_coords, function(x) x[4])
